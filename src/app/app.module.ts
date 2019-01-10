@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {AngularFireModule} from '@angular/fire';
-import {AngularFireAuth} from '@angular/fire/auth';
+import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AngularFireFunctionsModule} from '@angular/fire/functions';
 import {BrowserModule} from '@angular/platform-browser';
@@ -19,7 +19,7 @@ import {AppComponent} from './app.component';
 		AppRoutingModule,
 		BrowserAnimationsModule,
 		AngularFireModule.initializeApp(environment.firebase),
-		AngularFireAuth,
+		AngularFireAuthModule,
 		AngularFirestoreModule,
 		AngularFireFunctionsModule,
 	],
