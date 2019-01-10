@@ -1,5 +1,6 @@
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {AngularFireAuth} from '@angular/fire/auth';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 
@@ -16,7 +17,10 @@ export class LayoutComponent {
 			map(result => result.matches)
 		);
 
-	constructor(private breakpointObserver: BreakpointObserver) {
+	constructor(private afAuth: AngularFireAuth, private breakpointObserver: BreakpointObserver) {
 	}
 
+	logout() {
+		this.afAuth.auth.signOut().catch();
+	}
 }
