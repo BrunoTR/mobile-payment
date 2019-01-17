@@ -10,5 +10,11 @@ export class UpdateUser implements Action {
 	}
 }
 
-export type UserAction = UpdateUser;
+export const LOGOUT_USER = '[User] LOGOUT_USER';
+
+export class LogoutUser implements Action {
+	readonly type = LOGOUT_USER;
+}
+
+export type UsersAction = UpdateUser | LogoutUser;
 
