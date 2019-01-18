@@ -8,7 +8,7 @@ import {LoginComponent} from './containers/login/login.component';
 import {CoreRoutingModule} from './core-routing.module';
 import {AuthGuard} from './guards/auth.guard';
 import {UsersEffects} from './store/effects/users.effects';
-import {coreReducer} from './store/reducer/core.reducer';
+import {coreReducers} from './store/reducer/coreReducers';
 
 @NgModule({
 	declarations: [LayoutComponent, LoginComponent],
@@ -16,7 +16,7 @@ import {coreReducer} from './store/reducer/core.reducer';
 		SharedModule,
 		CoreRoutingModule,
 		EffectsModule.forFeature([UsersEffects]),
-		StoreModule.forFeature('core', coreReducer),
+		StoreModule.forFeature('core', coreReducers),
 	],
 	providers: [AuthGuard],
 })

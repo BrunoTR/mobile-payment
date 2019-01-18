@@ -4,7 +4,7 @@ import {Store} from '@ngrx/store';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {LogoutUser} from '../../store/actions/users.action';
-import {CoreState} from '../../store/reducer/core.reducer';
+import {CoreState} from '../../store/reducer/coreReducers';
 
 
 @Component({

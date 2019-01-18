@@ -6,7 +6,7 @@ export interface CoreState {
 	users: UserState;
 }
 
-export const coreReducer: ActionReducerMap<CoreState> = {
+export const coreReducers: ActionReducerMap<CoreState> = {
 	users: usersReducer,
 };
 
